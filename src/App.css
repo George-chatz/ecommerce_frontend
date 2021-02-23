@@ -11,8 +11,13 @@
 }
 
 .left_header > input {
-  border: none;
+  /* border: none; */
   width: 100%;
+  }
+
+  #textBox {
+    margin-top: 0.5vh;
+    height: 25px;
   }
   
   .left_header {
