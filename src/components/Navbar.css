@@ -1,0 +1,76 @@
+.navbar {
+    background: white;
+    position: absolute;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    margin: none;
+  
+  }
+
+  .navbar-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    object-fit: fill;
+
+  }
+
+  .navbar-logo {
+    color:white;
+    justify-self: start;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    height: 8vh;
+  pointer-events: none;
+  }
+  
+  .navbar-logo {
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: left;
+  }
+
+  .nav-links {
+    color: black;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    height: 100%;
+    justify-content: space-between;
+  }
+  
+  .nav-links:hover {
+    border-bottom: 4px solid #023E7E;
+    transition: all 0.2s ease-out;
+  }
+
+  .matUIwish {
+      margin-right: 10px;
+      color:#023E7E;
+  }
+
+  .matUIuser {
+    margin-right: 10px;
+    color:#023E7E;
+
+  }
+
+  .matUIcart {
+    margin-right: 10px;
+    color:#023E7E;
+  }
+
+  

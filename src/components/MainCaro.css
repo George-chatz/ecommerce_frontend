@@ -1,0 +1,63 @@
+.main-container {
+  margin-top: 50px;
+  background-color: #FB002D;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    
+  
+
+  }
+  
+  .main-container >h1 {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    background-color: #FB002D;
+    color: white;
+  }
+  
+  
+  .main-btns {
+    margin-top: 32px;
+  }
+  
+  .main-btns .btn {
+    margin: 6px;
+  }
+  
+  .fa-play-circle {
+    margin-left: 4px;
+  }
+  
+  @media screen and (max-width: 960px) {
+    .main-container > h1 {
+      font-size: 70px;
+      margin-top: -150px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .main-container > h1 {
+      font-size: 50px;
+      margin-top: -100px;
+    }
+  
+    .main-container > p {
+      font-size: 30px;
+    }
+  
+    .btn-mob {
+      display: block;
+      text-decoration: none;
+    }
+  
+    .btn {
+      width: 100%;
+    }
+  }

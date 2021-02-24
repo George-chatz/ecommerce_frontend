@@ -1,32 +1,55 @@
-.beatleslogo {
-  height: 8vh;
-  pointer-events: none;
-  
+* {
+  background-color: white;
 }
 
 
-.navbar {
-  display: flex;
-  justify-content: space-evenly;
-}
+
+
+
 
 .left_header > input {
-  /* border: none; */
-  width: 100%;
-  }
-
-  #textBox {
-    margin-top: 0.5vh;
-    height: 25px;
-  }
+  color: white;
   
-  .left_header {
-  flex: 0.5;
-  min-width: 70px;
-  background-color: white;
-  color: grey;
+  border: none;
+  width: 50%;
+}
+
+.left_header {
+  flex: 0.3;
+  min-width: 50px;
+  background-color: #023E7E;
+  
   border-radius: 30px;
+  
   padding: 10px;
   display: flex;
   align-items: center;
+}
+
+
+
+
+
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    /* width: 100vw;
+    height: 100vh; */
   }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .search {
+    background-color:#023E7E;
+    color: white;
+  }
+  
+  
+  
+ 
