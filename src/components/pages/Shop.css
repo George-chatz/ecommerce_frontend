@@ -1,0 +1,9 @@
+.shop {
+    display: flex;
+    flex-direction: column;
+}
+
+.shopproducts {
+    display: flex;
+    justify-content: row;
+}

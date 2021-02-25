@@ -1,0 +1,17 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: fit-content;
+}
+.itemname {
+    text-align: center;
+    margin: none;
+}
+.btmproduct {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+

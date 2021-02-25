@@ -1,17 +1,28 @@
 import React from "react";
 import "../products/products.css";
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 
-const product =({image,itemname,price,description}) => {
+
+const Product =({image,itemname,price,description}) => {
     return (
         <div className="product">
-            <div className="productinfo">
-                <img className="image" src={image} alt=""></img>
-                <p>{itemname}</p>
-                <p>{price}</p>
-                <p>{description}</p>
+            <div className="productcontainer">
+                <div>
+                        <img className="image" src={image} alt=""></img>
+                    </div>
+                    <div className="itemname">
+                        {itemname}
+                    </div>
+                    <div className="btmproduct">
+                        <FavoriteIcon />
+                        <p>{price}</p>
+                        <ShoppingBasketIcon />
+                </div>   
             </div>
+           
         </div>
     )
 }
 
-export default product;
+export default Product;
