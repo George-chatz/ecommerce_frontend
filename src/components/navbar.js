@@ -1,7 +1,7 @@
 import React from "react";
 import './Navbar.css';
-import logomain from "./images/logomain.jpg"
-import fab4logo from "./images/FAB4STOREWEB.png"
+import logomain from "../images/logomain.jpg";
+import fab4logo from "..//images/FAB4STOREWEB.png"
 import {Link} from "react-router-dom";
 import SearchIcon from "@material-ui/icons/Search";
 import FavoriteIcon from '@material-ui/icons/Favorite';
@@ -24,11 +24,11 @@ const NavBar = () =>  {
         <Link to="/About" className='nav-links'>About</Link>
         <Link to="/Shop" className='nav-links'>Shop</Link>
 
-
-        <Link> <FavoriteIcon className="matUIwish" alt ="wishlist" fontSize="large"></FavoriteIcon></Link>
-        <Link> <PersonIcon className="matUIuser"  alt ="user" fontSize="large"></PersonIcon></Link>
-        <Link> <ShoppingBasketIcon className="matUIcart" alt ="cart" fontSize="large"></ShoppingBasketIcon></Link>
-    
+        
+        <Link> <FavoriteIcon className="matUIwish, bodyshuff" alt ="wishlist" fontSize="large"></FavoriteIcon></Link>
+        <Link> <PersonIcon className="matUIuser, bodyshuff"  alt ="user" fontSize="large"></PersonIcon></Link>
+        <Link> <ShoppingBasketIcon className="matUIcart, bodyshuff" alt ="cart" fontSize="large"></ShoppingBasketIcon></Link>
+        
         <div className="left_header">
                 <SearchIcon className="search"/>
                 <input placeholder="Search products" className="search"

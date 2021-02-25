@@ -3,15 +3,17 @@ import "./Home.css"
 import MainCaro from '../MainCaro'
 import React from 'react';
 import ImageSlider from '../ImageSlider';
-import InstagramEmbed from 'react-instagram-embed';
 import unionjacklargecushion from "../images/unionjacklargecushion.jpg"
 import glasses from "../images/glasses.jpg"
 import flipper from "../images/flipper.png"
 import Featuredproducts from "../products/featuredproducts"
+import Navbar from "../Navbar.js"
 
 function Home() {
     return (
-        <div className="homecontainer">
+        <div>
+            <Navbar />
+            <div className="homecontainer">
                 <MainCaro/>
                 <ImageSlider/>
             <div className="newarrivals">
@@ -24,7 +26,10 @@ function Home() {
             </div>
             
         </div>  
+        </div>
+        
     )
 }
 
 export default Home;
+
