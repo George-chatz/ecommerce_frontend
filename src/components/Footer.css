@@ -1,0 +1,66 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+ul
+{
+    list-style-type: none;
+    text-align: center;
+}
+
+
+
+.column > h2 {
+    text-align: center;
+    line-height: 75px;
+    box-sizing: border-box;
+    
+}
+
+
+
+
+.main-footer {
+    color: black;
+    font-family: proxima-nova, sans-serif;
+    font-style: normal;
+    background: white;
+    padding-top: 1em;
+    position: static;
+    bottom: 1%;
+    width: 100%;   
+}
+
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    
+}
+
+
+
+.navbar-logo1 {
+    justify-self: start;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 10vh;
+}
+
+
+
+.terms:link {
+    color:black;
+}
+
+.terms:visited {
+    color:black;
+}

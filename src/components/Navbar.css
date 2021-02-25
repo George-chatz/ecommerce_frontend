@@ -50,6 +50,8 @@
     padding: 0.5rem 1rem;
     height: 100%;
     justify-content: space-between;
+    font-family: proxima-nova, sans-serif;
+    font-style: normal;
   }
   
   .nav-links:hover {
@@ -65,12 +67,16 @@
   .matUIuser {
     margin-right: 10px;
     color:#023E7E;
+}
 
-  }
+.matUIcart {
+  margin-right: 10px;
+  color:#023E7E;
+}
 
-  .matUIcart {
-    margin-right: 10px;
-    color:#023E7E;
-  }
-
+.bodyshuff:hover {
+  transition: 100ms transform ease-in;
+  transform: scale(1.09);
+  color: #023E7E;
+}
   
