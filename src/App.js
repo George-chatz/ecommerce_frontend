@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Home from './components/pages/Home';
 import Shop from './components/pages/Shop';
 
 const App = () => {
+  // const [dropdown, setDropdown] = useState(false)
+
     return (
       <div className="App">
         <Router>
@@ -16,6 +18,16 @@ const App = () => {
             </Switch>
           </div>
         </Router>
+         {/* <button onClick={() => setDropdown(!dropdown)}>open menu</button>        
+        {dropdown ? (
+          <div>
+            <ul>
+              <li>This is the dropdown now showing on the screen</li> 
+            </ul>
+          </div>
+        ) : (
+          null
+        )} */}
       </div>
     );
 };  

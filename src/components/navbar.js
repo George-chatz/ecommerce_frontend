@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './Navbar.css';
 import logomain from "../images/logomain.jpg";
 import fab4logo from "..//images/FAB4STOREWEB.png"
@@ -7,11 +7,17 @@ import SearchIcon from "@material-ui/icons/Search";
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import PersonIcon from '@material-ui/icons/Person';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+
+import DropdownMenu from "./DropdownMenu";
+
 import CustomizedMenus from "../components/Dropdownmenu"
 
 
+  
 
 const NavBar = () =>  {
+  const [dropdown, setDropdown] = useState(false)
+
   return (
     <div className="navbar">
       
@@ -23,13 +29,24 @@ const NavBar = () =>  {
         <Link to="/" className='nav-links'>Home</Link>
         <Link to="/TBS" className='nav-links'>TBS</Link>
         <Link to="/About" className='nav-links'>About</Link>
-        
-
-        <CustomizedMenus />
-        <Link> <FavoriteIcon className="matUIwish, bodyshuff" alt ="wishlist" fontSize="large"></FavoriteIcon></Link>
-        <Link> <PersonIcon className="matUIuser, bodyshuff"  alt ="user" fontSize="large"></PersonIcon></Link>
-        <Link> <ShoppingBasketIcon className="matUIcart, bodyshuff" alt ="cart" fontSize="large"></ShoppingBasketIcon></Link>
-        
+        {/* <Link to="/DropdownMenu" className='nav-links'><DropdownMenu /></Link>
+        <button onClick={() => setDropdown(!dropdown)}>open menu</button>        
+        {dropdown ? (
+          <div className="dropdownMenu">
+            <ul>
+              <li>This is the dropdown now showing on the screen</li> 
+            </ul>
+          </div>
+        ) : (
+          null
+        )}
+        */}
+        <DropdownMenu />
+        <CustomizedMenus/>
+        <Link> <FavoriteIcon className="matUIwish" alt ="wishlist" fontSize="large"></FavoriteIcon></Link>
+        <Link> <PersonIcon className="matUIuser"  alt ="user" fontSize="large"></PersonIcon></Link>
+        <Link> <ShoppingBasketIcon className="matUIcart" alt ="cart" fontSize="large"></ShoppingBasketIcon></Link>
+    
         <div className="left_header">
                 <SearchIcon className="search"/>
                 <input placeholder="Search products" className="search"
