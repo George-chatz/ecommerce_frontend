@@ -8,11 +8,13 @@ import flipper from "../images/flipper.png"
 import Featuredproducts from "../products/featuredproducts"
 import Navbar from "../Navbar.js"
 import Footer from "../Footer"
+import SocialBar from '../socialsbar/socialsbar';
 
 function Home() {
     return (
         <div>
             <Navbar />
+            <SocialBar />
             <div className="homecontainer">
                 <MainCaro/>
             <div className="newarrivals">
