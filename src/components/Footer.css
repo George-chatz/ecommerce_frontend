@@ -5,7 +5,3 @@
     align-items: center;
 }
 
-.row {
-    display: flex;
-    justify-content: row;
-}

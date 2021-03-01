@@ -7,13 +7,16 @@ import SearchIcon from "@material-ui/icons/Search";
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import PersonIcon from '@material-ui/icons/Person';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
-
-
 import CustomizedMenus from "./DropdownMenu.js"
 
 
 const NavBar = () =>  {
   const [dropdown, setDropdown] = useState(false)
+  const [search,setSearch] = useState("");
+
+  const searchHandler = (val) => {
+    setSearch(val.target.value);
+  }
 
   return (
     <div className="navbar">
@@ -35,12 +38,12 @@ const NavBar = () =>  {
         <div className="left_header">
                 <SearchIcon className="search"/>
                 <input placeholder="Search products" className="search"
-                type="text" />
+                type="text" onChange={e=>searchHandler(e)}/>
        </div>
 
 
     </div>
-
+ 
     
   );
 };

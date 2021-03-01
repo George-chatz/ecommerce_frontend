@@ -23,18 +23,15 @@
   align-items: center;
 }
 
-
-  
-  
-  .navbar {
+.navbar {
     display: flex;
     justify-content: space-evenly;
-  }
+}
   
-  .search {
+.search {
     background-color:#023E7E;
     color: white;
-  }
+}
   
     
   

@@ -17,7 +17,6 @@ function Home() {
             <SocialBar />
             <div className="homecontainer">
                 <MainCaro/>
-                <SocialBar />
             <div className="newarrivals">
                 <p className="newarr"> SHOP NEW ARRIVALS</p>
                 <div className="featuredproducts">
