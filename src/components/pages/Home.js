@@ -8,7 +8,7 @@ import flipper from "../images/flipper.png"
 import Featuredproducts from "../products/featuredproducts"
 import Navbar from "../Navbar.js"
 import Footer from "../Footer"
-import SocialBar from '../socialsbar/socialsbar';
+import SocialBar from '../socialsbar/Socialsbar';
 
 function Home() {
     return (
@@ -17,8 +17,9 @@ function Home() {
             <SocialBar />
             <div className="homecontainer">
                 <MainCaro/>
+                <SocialBar />
             <div className="newarrivals">
-                SHOP NEW ARRIVALS
+                <p className="newarr"> SHOP NEW ARRIVALS</p>
                 <div className="featuredproducts">
                     <Featuredproducts featuredimage={unionjacklargecushion}/>
                     <Featuredproducts featuredimage={glasses}/>

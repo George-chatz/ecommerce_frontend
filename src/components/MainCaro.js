@@ -8,7 +8,6 @@ function Main() {
   return (
     <div className='main-container'>
       
-      <h1>WELCOME TO THE FAB 4 STORE</h1>
      <br></br>
      <ReactPlayer
     url="https://www.youtube.com/watch?v=b7ODwJBx8js"
