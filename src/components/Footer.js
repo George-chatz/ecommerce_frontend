@@ -3,7 +3,7 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <div className="main-footer">
+        <div className="footer">
             <div className="column">
                 <h2> PRODUCTS </h2>
                 <div className="uslist">
@@ -12,7 +12,6 @@ const Footer = () => {
                     <p>Clothing</p>
                     <p>Souvenirs</p>
                     <p>Homeware</p>
-                    <p>Confectionary</p>
                 </div>
                     </div>
             <div className="column">
@@ -27,14 +26,14 @@ const Footer = () => {
                 </div>
             </div>
             <div className="column">
-                <h2> SUPPORT </h2>
+                <h2> About Us </h2>
                 <div className="uslist">
-                    <p>Help and Customer Service</p>
-                    <p>Returns and Refunds</p>
-                    <p>Delivery and Shipping</p>
-                    <p>Size Charts</p>
-                    <p>Gift Cards</p>
-                    <p>Find Us</p>
+                    <p>Press</p>
+                    <p>Partnerships</p>
+                    <p>Vacancies</p>
+                    <p>Awards</p>
+                    <p>Legal</p>
+                    <p>Contact Us</p>
                 </div>
             </div>
                     <br></br>

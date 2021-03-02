@@ -8,7 +8,6 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import PersonIcon from '@material-ui/icons/Person';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 
-
 import CustomizedMenus from "./DropdownMenu.js"
 
 
@@ -24,7 +23,6 @@ const NavBar = () =>  {
       
 
         <Link to="/" className='nav-links'>Home</Link>
-        <Link to="/TBS" className='nav-links'>TBS</Link>
         <Link to="/About" className='nav-links'>About</Link>
        
         <CustomizedMenus/>

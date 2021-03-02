@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Home from './components/pages/Home';
 import Shop from './components/pages/Shop';
 import About from './components/pages/About';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 
 const App = () => {
@@ -12,7 +14,9 @@ const App = () => {
     return (
       <div className="App">
         <Router>
+          <Navbar/>
           <div className="App-header">
+
             
             <Switch>
               <Route path='/' exact component={Home}  />
@@ -20,17 +24,9 @@ const App = () => {
               <Route path='/About' exact component={About}  />
             </Switch>
           </div>
+          <Footer/>
         </Router>
-         {/* <button onClick={() => setDropdown(!dropdown)}>open menu</button>        
-        {dropdown ? (
-          <div>
-            <ul>
-              <li>This is the dropdown now showing on the screen</li> 
-            </ul>
-          </div>
-        ) : (
-          null
-        )} */}
+         
       </div>
     );
 };  
