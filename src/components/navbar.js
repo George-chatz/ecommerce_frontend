@@ -40,8 +40,6 @@ const NavBar = () =>  {
                 <input placeholder="Search products" className="search"
                 type="text" onChange={e=>searchHandler(e)}/>
        </div>
-
-
     </div>
  
     

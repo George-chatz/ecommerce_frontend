@@ -7,7 +7,8 @@ import glasses from "../images/glasses.jpg"
 import flipper from "../images/flipper.png"
 import Featuredproducts from "../products/featuredproducts"
 import Navbar from "../Navbar.js"
-import Footer from "../Footer"
+import Footer from "../Footers/Footer"
+import BottomFooter from "../Footers/BottomFooter"
 import SocialBar from '../socialsbar/Socialsbar';
 
 function Home() {
@@ -26,6 +27,7 @@ function Home() {
                  </div>
             </div>
             <Footer />
+            <BottomFooter />
         </div>  
         </div>
         
