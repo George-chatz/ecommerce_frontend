@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './Navbar.css';
+import './NavBar.css';
 import logomain from "../images/logomain.jpg";
 import fab4logo from "..//images/FAB4STOREWEB.png"
 import {Link} from "react-router-dom";
@@ -49,8 +49,6 @@ setSearchResults(data);
                 <input placeholder="Search products" className="search"
                 type="text" onChange={(e)=>searchHandler(e)} onClick={dataSearch}/>
        </div>
-
-
     </div>
  
     

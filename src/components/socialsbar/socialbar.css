@@ -1,13 +1,15 @@
 .container {
     display: block;
-    align-content: center;
+    align-items: center;
     position: fixed;
     top: 50%;
-    width: 30px;
-    background-color: rgb(105, 238, 101);  
+    width: 47px;
+    background-color: rgb(105, 238, 101);
+    padding-top: 5px;  
 }
 
 .socialicon {
     color: white;
+    padding: 12px;
 }
 

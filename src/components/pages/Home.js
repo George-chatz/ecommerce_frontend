@@ -6,9 +6,10 @@ import unionjacklargecushion from "../images/unionjacklargecushion.jpg"
 import glasses from "../images/glasses.jpg"
 import flipper from "../images/flipper.png"
 import Featuredproducts from "../products/featuredproducts"
-import Navbar from "../Navbar"
-import Footer from "../Footer"
-import SocialBar from "../socialsbar/socialsbar"
+import Navbar from "../Navbar.js"
+import Footer from "../Footers/Footer"
+import BottomFooter from "../Footers/BottomFooter"
+import SocialBar from '../socialsbar/Socialsbar';
 
 function Home() {
     return (
@@ -26,6 +27,7 @@ function Home() {
                  </div>
             </div>
             <Footer />
+            <BottomFooter />
         </div>  
         </div>
         
