@@ -6,9 +6,9 @@ import unionjacklargecushion from "../images/unionjacklargecushion.jpg"
 import glasses from "../images/glasses.jpg"
 import flipper from "../images/flipper.png"
 import Featuredproducts from "../products/featuredproducts"
-import Navbar from "../Navbar.js"
+import Navbar from "../Navbar"
 import Footer from "../Footer"
-import SocialBar from '../socialsbar/Socialsbar';
+import SocialBar from "../socialsbar/socialsbar"
 
 function Home() {
     return (
