@@ -1,7 +1,7 @@
 import '../../App.css'
 import React from 'react';
 import Product from "../products/products"
-import NavBar from '../Navbar';
+import NavBar from '../NavBar';
 import glasses from "../images/glasses.jpg"
 
 function Shop() {

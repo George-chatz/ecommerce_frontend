@@ -5,6 +5,7 @@ import Home from './components/pages/Home';
 import Shop from './components/pages/Shop';
 import About from './components/pages/About';
 import SearchIcon from "@material-ui/icons/Search";
+import Search from './components/pages/Search/Search';
 
 
 const App = () => {
@@ -19,7 +20,7 @@ const App = () => {
               <Route path='/' exact component={Home}  />
               <Route path='/Shop' exact component={Shop}  />
               <Route path='/About' exact component={About}  />
-              <Route path='/search/:result' children={<Search/>} />
+              {/* <Route path='/search/' exact component={Search} /> */}
             </Switch>
           </div>
         </Router>

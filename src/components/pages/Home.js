@@ -6,15 +6,15 @@ import unionjacklargecushion from "../images/unionjacklargecushion.jpg"
 import glasses from "../images/glasses.jpg"
 import flipper from "../images/flipper.png"
 import Featuredproducts from "../products/featuredproducts"
-import Navbar from "../Navbar.js"
+import NavBar from "../NavBar" 
 import Footer from "../Footers/Footer"
 import BottomFooter from "../Footers/BottomFooter"
-import SocialBar from '../socialsbar/Socialsbar';
+import SocialBar from "../socialsbar/socialsbar";
 
 function Home() {
     return (
         <div>
-            <Navbar />
+            <NavBar />
             <SocialBar />
             <div className="homecontainer">
                 <MainCaro/>

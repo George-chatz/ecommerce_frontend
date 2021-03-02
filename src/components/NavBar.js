@@ -21,10 +21,11 @@ const NavBar = () =>  {
 
 const dataSearch = async () => {
 
-const res = await fetch(`http://localhost/products/${search}`);
+const res = await fetch(`http://localhost:5000/search/${search}`);
 
 const data = await res.json();
 setSearchResults(data);
+console.log(data);
 }
 
   return (
@@ -45,7 +46,8 @@ setSearchResults(data);
         <Link> <ShoppingBasketIcon className="matUIcart" alt ="cart" fontSize="large"></ShoppingBasketIcon></Link>
     
         <div className="left_header">
-        <Link to="/search"><SearchIcon className="search"/></Link>
+        <SearchIcon className="search" onClick={dataSearch}/>
+        {/* <Link to="/search"><SearchIcon className="search"/></Link> */}
                 <input placeholder="Search products" className="search"
                 type="text" onChange={(e)=>searchHandler(e)} onClick={dataSearch}/>
        </div>
