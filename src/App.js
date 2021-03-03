@@ -64,6 +64,7 @@ const App = () => {
               <Route path='/Shop' exact component={Shop}  />
               <Route path='/About' exact component={About}  />
   {result &&<Route path='/search/'><Search searchRes={searchResults} /></Route>}
+  <Route path='/checkout'/>
   {catResult &&<Route path='/category/'><Categories categoriesRes={category}/></Route>}
             </Switch>
           </div>
