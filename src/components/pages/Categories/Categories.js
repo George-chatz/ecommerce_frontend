@@ -1,11 +1,10 @@
-import react, {useState} from 'react';
+import react from 'react';
 
-
-
-const Search = (searchRes) => {
+const Categories = (categoriesRes) => {
     
-    let array = searchRes.searchRes;
-    // console.log(array[0])
+    // console.log(categoriesRes)
+    let array = categoriesRes.categoriesRes;
+    console.log(categoriesRes.categoriesRes[0])
     return (
         <div>
             <p>hello world</p>
@@ -18,10 +17,10 @@ const Search = (searchRes) => {
             <p>hello</p>
             <p>hello</p>
             <img src={array[0].img} />
-            <p>{array[0].img}</p> 
+            <p>{array[0].img}</p>
         </div>
         
     )
 }
 
-export default Search;
+export default Categories;
