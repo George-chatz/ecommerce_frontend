@@ -1,10 +1,13 @@
 import react from 'react';
 
-const Result = () => {
+const Result = (searchRes) => {
 
-    return (
+console.log(searchRes.searchRes[0]);
+    
+return (
         <div>
-            
+            <p>hello world</p>
+            {/* <p>{searchRes[0].img}</p> */}
         </div>
         
     )

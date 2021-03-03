@@ -8,11 +8,28 @@ import PersonIcon from '@material-ui/icons/Person';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import CustomizedMenus from "./Dropdownmenu"
 import Search from '../components/pages/Search/Search'
+import SearchIcon from "@material-ui/icons/Search";
 
 
-const NavBar = () =>  {
+const NavBar = ({searchHandle, searchData}) =>  {
   const [dropdown, setDropdown] = useState(false);
 
+
+  const [search, setSearch] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
+  const searchHandler = (val) => {
+      setSearch(val.target.value);
+    } 
+  
+  const dataSearch = async () => {
+  
+  const res = await fetch(`http://localhost:5000/search/${search}`);
+  
+  const data = await res.json();
+  setSearchResults(data);
+  console.log(data);
+  }
 
   return (
     <div className="navbar">
@@ -31,9 +48,12 @@ const NavBar = () =>  {
         <Link> <PersonIcon className="matUIuser"  alt ="user" fontSize="large"></PersonIcon></Link>
         <Link> <ShoppingBasketIcon className="matUIcart" alt ="cart" fontSize="large"></ShoppingBasketIcon></Link>
     
-        <div>
-        <Search />
-       </div>
+        <div className="left_header">
+        <SearchIcon className="search" onClick={searchData}/>
+        {/* <Link to="/result"><SearchIcon className="search"/></Link> */}
+                <input placeholder="Search products" className="search"
+                type="text" onChange={searchHandle}/>
+        </div>
     </div>
  
     //onChange={(e)=>searchHandler(e)}
