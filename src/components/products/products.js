@@ -9,13 +9,15 @@ import Typography from "@material-ui/core/Typography";
 import IconButton from '@material-ui/core/IconButton';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
-
-const Product =({image,itemname,price, product, onAddToCart}) => {
+ 
+const Product =({image,itemname,price, product, addToCart}) => {
 
 // const handleAddToCart = () => onAddToCart(product.id, 1);
 // haven't figured this out yet
 // add onClick={handleAddToCart} to add to shopping cart icon
 
+
+//can a unique key (ie. index) be assigned to allow react to identify each card?
     return (
         <Card className="root">
             <CardActionArea>
@@ -33,7 +35,7 @@ const Product =({image,itemname,price, product, onAddToCart}) => {
           </IconButton>
           <p>{price}</p>
           <IconButton color="primary" aria-label="add to shopping cart">
-          <AddShoppingCartIcon />
+          <AddShoppingCartIcon/>
           </IconButton>
           </Typography>
         </CardContent>
