@@ -10,6 +10,15 @@ const Search = (searchRes) => {
     return (
         <div>
             <p>hello world</p>
+            {/* <p>{array[0].img}</p> */}
+            <p>hello</p>
+            <p>hello</p>
+            <p>hello</p>
+            <p>hello</p>
+            <p>hello</p>
+            <p>hello</p>
+            <p>hello</p>
+            <img src={array[0].img} />
             <p>{array[0].img}</p>
         </div>
         
