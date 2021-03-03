@@ -4,6 +4,7 @@ import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import ListItemText from "@material-ui/core/ListItemText";
+import {Link} from 'react-router-dom';
 
 const StyledMenu = withStyles({
   paper: {
@@ -36,8 +37,12 @@ const StyledMenuItem = withStyles((theme) => ({
   },
 }))(MenuItem);
 
-export default function CustomizedMenus() {
+export default function CustomizedMenus({media, clothing, accessories, souveniers, homeware}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const testFunc = () => {
+    console.log("working")
+  }
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -47,7 +52,7 @@ export default function CustomizedMenus() {
     setAnchorEl(null);
   };
 
-    return (
+  return (
     <div>
       <Button
         aria-controls="customized-menu"
@@ -65,21 +70,27 @@ export default function CustomizedMenus() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <StyledMenuItem>
-          <ListItemText primary="Music, Books & Film" />
-        </StyledMenuItem>
-        <StyledMenuItem>
-          <ListItemText primary="Clothing" />
-        </StyledMenuItem>
-        <StyledMenuItem>
-          <ListItemText primary="Souveniers" />
-        </StyledMenuItem>
-          <StyledMenuItem>
-            <ListItemText primary="Confectionary" />
-          </StyledMenuItem>
-        <StyledMenuItem>
-          <ListItemText primary="Homeware" />
-        </StyledMenuItem>
+
+{/* <Link to="/" className='nav-links'>Home</Link> */}
+<Link to="/category"><StyledMenuItem onClick={media}>
+        <ListItemText primary="Music, Books & Film"/>
+        </StyledMenuItem></Link>
+
+        <Link to="/category"><StyledMenuItem onClick={clothing}>
+        <ListItemText primary="Clothing"/>
+        </StyledMenuItem></Link>
+
+        <Link to="/category"><StyledMenuItem onClick={accessories}>
+        <ListItemText primary="Accessories"/>
+        </StyledMenuItem></Link>
+
+        <Link to="/category"><StyledMenuItem onClick={souveniers}>
+        <ListItemText primary="Souveniers"/>
+        </StyledMenuItem></Link>
+
+       <Link to="/category"><StyledMenuItem onClick={homeware}>
+        <ListItemText primary="Homeware"/>
+        </StyledMenuItem></Link>
       </StyledMenu>
     </div>
   );

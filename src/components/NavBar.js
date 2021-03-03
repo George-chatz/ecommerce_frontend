@@ -11,25 +11,13 @@ import Search from '../components/pages/Search/Search'
 import SearchIcon from "@material-ui/icons/Search";
 
 
-const NavBar = ({searchHandle, searchData}) =>  {
+const NavBar = ({searchHandle, searchData, media, clothing, accessories, souveniers, homeware}) =>  {
   const [dropdown, setDropdown] = useState(false);
 
+const testFunc = () => { 
+  console.log("working")
+}
 
-  const [search, setSearch] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
-
-  const searchHandler = (val) => {
-      setSearch(val.target.value);
-    } 
-  
-  const dataSearch = async () => {
-  
-  const res = await fetch(`http://localhost:5000/search/${search}`);
-  
-  const data = await res.json();
-  setSearchResults(data);
-  console.log(data);
-  }
 
   return (
     <div className="navbar">
@@ -43,14 +31,14 @@ const NavBar = ({searchHandle, searchData}) =>  {
         <Link to="/TBS" className='nav-links'>TBS</Link>
         <Link to="/About" className='nav-links'>About</Link>
        
-        <CustomizedMenus/>
+        <CustomizedMenus media={media} clothing={clothing} accessories={accessories} souveniers={souveniers} homeware={homeware}/>
         <Link> <FavoriteIcon className="matUIwish" alt ="wishlist" fontSize="large"></FavoriteIcon></Link>
         <Link> <PersonIcon className="matUIuser"  alt ="user" fontSize="large"></PersonIcon></Link>
         <Link> <ShoppingBasketIcon className="matUIcart" alt ="cart" fontSize="large"></ShoppingBasketIcon></Link>
     
         <div className="left_header">
-        <SearchIcon className="search" onClick={searchData}/>
-        {/* <Link to="/result"><SearchIcon className="search"/></Link> */}
+        {/* <SearchIcon className="search" onClick={searchData}/> */}
+        <Link to="/search"><SearchIcon className="search" onClick={searchData}/></Link>
                 <input placeholder="Search products" className="search"
                 type="text" onChange={searchHandle}/>
         </div>
