@@ -3,30 +3,33 @@ import './NavBar.css';
 import logomain from "../images/logomain.jpg";
 import fab4logo from "..//images/FAB4STOREWEB.png"
 import {Link} from "react-router-dom";
-import SearchIcon from "@material-ui/icons/Search";
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import PersonIcon from '@material-ui/icons/Person';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import CustomizedMenus from "./DropdownMenu"
+import Search from '../components/pages/Search/Search'
+import SearchIcon from "@material-ui/icons/Search";
 
 
-const NavBar = () =>  {
+const NavBar = ({searchHandle, searchData}) =>  {
   const [dropdown, setDropdown] = useState(false);
+
+
   const [search, setSearch] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
   const searchHandler = (val) => {
-    setSearch(val.target.value);
-  } 
-
-const dataSearch = async () => {
-
-const res = await fetch(`http://localhost:5000/search/${search}`);
-
-const data = await res.json();
-setSearchResults(data);
-console.log(data);
-}
+      setSearch(val.target.value);
+    } 
+  
+  const dataSearch = async () => {
+  
+  const res = await fetch(`http://localhost:5000/search/${search}`);
+  
+  const data = await res.json();
+  setSearchResults(data);
+  console.log(data);
+  }
 
   return (
     <div className="navbar">
@@ -46,14 +49,14 @@ console.log(data);
         <Link> <ShoppingBasketIcon className="matUIcart" alt ="cart" fontSize="large"></ShoppingBasketIcon></Link>
     
         <div className="left_header">
-        <SearchIcon className="search" onClick={dataSearch}/>
-        {/* <Link to="/search"><SearchIcon className="search"/></Link> */}
+        <SearchIcon className="search" onClick={searchData}/>
+        {/* <Link to="/result"><SearchIcon className="search"/></Link> */}
                 <input placeholder="Search products" className="search"
-                type="text" onChange={(e)=>searchHandler(e)} onClick={dataSearch}/>
-       </div>
+                type="text" onChange={searchHandle}/>
+        </div>
     </div>
  
-    
+    //onChange={(e)=>searchHandler(e)}
   );
 };
    

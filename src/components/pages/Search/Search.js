@@ -1,13 +1,25 @@
-import react from 'react';
-import {useParams, useLocation} from 'react-router-dom';
+import react, {useState} from 'react';
+import SearchIcon from "@material-ui/icons/Search";
 
 
 
-const Search = () => {
+const Search = (searchRes) => {
     
+    let array = searchRes.searchRes;
+    // console.log(searchRes.searchRes[0])
     return (
         <div>
-            <p>Search:</p>
+            <p>hello world</p>
+            {/* <p>{array[0].img}</p> */}
+            <p>hello</p>
+            <p>hello</p>
+            <p>hello</p>
+            <p>hello</p>
+            <p>hello</p>
+            <p>hello</p>
+            <p>hello</p>
+            <img src={array[0].img} />
+            <p>{array[0].img}</p>
         </div>
         
     )

@@ -1,14 +1,14 @@
 import '../../App.css'
 import React from 'react';
-import Product from "../products/Products"
-import NavBar from '../NavBar';
-import glasses from "../images/glasses.jpg"
+import Product from "../products/Products";
+
 
 function Shop() {
     return (
         <div className="shop">
-            <div className="navbar"> 
-                <NavBar />
+            <div className="shopbanner"> 
+            <img/>
+                
             </div>
             <div >
                 <Product
