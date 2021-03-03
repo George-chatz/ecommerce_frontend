@@ -1,6 +1,6 @@
 import '../../App.css'
 import React from 'react';
-import Product from "../products/Products";
+import Product from "../products/products";
 
 
 function Shop() {
@@ -12,12 +12,12 @@ function Shop() {
             </div>
             <div >
                 <Product
-                image={glasses}
+                // image={glasses}
                 itemname={"John Lennon Party Glasses"}
                 price={"2£"}
                 />
                 <Product
-                image={glasses}
+                // image={glasses}
                 itemname={"John Lennon Party Glasses"}
                 price={"2£"}
                 />      
