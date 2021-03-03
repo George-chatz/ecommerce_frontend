@@ -1,26 +1,24 @@
-import react, {useState} from 'react';
+
+import React, {useState} from 'react';
+import "./Search.css";
+import Product from '../../products/products';
 
 
 
 const Search = (searchRes) => {
     
     let array = searchRes.searchRes;
-    // console.log(array[0])
+
     return (
         <div>
-            <p>hello world</p>
-            {/* <p>{array[0].img}</p> */}
-            <p>hello</p>
-            <p>hello</p>
-            <p>hello</p>
-            <p>hello</p>
-            <p>hello</p>
-            <p>hello</p>
-            <p>hello</p>
-            <img src={array[0].img} />
-            <p>{array[0].img}</p> 
-        </div>
-        
+            {array.map((array) => (
+                <Product 
+                    image = {array.img}
+                    itemname = {array.product_name}
+                    price = {array.price}
+                />
+            ))}   
+        </div>  
     )
 }
 

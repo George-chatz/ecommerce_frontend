@@ -4,7 +4,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 
 
-const Product =({image,itemname,price,description}) => {
+const Product =({image,itemname,price}) => {
     return (
         <div className="product">
             <div className="productcontainer">
