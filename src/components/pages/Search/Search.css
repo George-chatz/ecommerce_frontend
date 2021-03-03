@@ -1,0 +1,30 @@
+/* .searchproduct {
+    display: flex;
+    justify-content: row    ;
+    flex-wrap: wrap;
+}
+
+.productcontainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: min-content;
+    
+}
+
+.image  {
+    height: 200px;
+    padding: 20px;
+}
+.productname {
+   
+    text-align: center;
+    margin: none;
+    
+}
+.btmproduct {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 20px;
+} */

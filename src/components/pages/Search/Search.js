@@ -1,18 +1,21 @@
-import react, {useState} from 'react';
-import SearchIcon from "@material-ui/icons/Search";
-
+import React, {useState} from 'react';
+import "./Search.css";
+import Product from '../../products/products';
 
 
 const Search = (searchRes) => {
     
     let array = searchRes.searchRes;
-    // console.log(searchRes.searchRes[0])
     return (
         <div>
-            <p>hello world</p>
-            <p>{array[0].img}</p>
-        </div>
-        
+            {array.map((array) => (
+                <Product 
+                    image = {array.img}
+                    itemname = {array.product_name}
+                    price = {array.price}
+                />
+            ))}   
+        </div>  
     )
 }
 

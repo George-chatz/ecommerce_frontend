@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import PersonIcon from '@material-ui/icons/Person';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
-import CustomizedMenus from "./Dropdownmenu"
+import CustomizedMenus from "./DropdownMenu"
 import Search from '../components/pages/Search/Search'
 import SearchIcon from "@material-ui/icons/Search";
 

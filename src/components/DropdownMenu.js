@@ -47,7 +47,7 @@ export default function CustomizedMenus() {
     setAnchorEl(null);
   };
 
-  return (
+    return (
     <div>
       <Button
         aria-controls="customized-menu"
@@ -74,9 +74,9 @@ export default function CustomizedMenus() {
         <StyledMenuItem>
           <ListItemText primary="Souveniers" />
         </StyledMenuItem>
-        <StyledMenuItem>
-          <ListItemText primary="Confectionary" />
-        </StyledMenuItem>
+          <StyledMenuItem>
+            <ListItemText primary="Confectionary" />
+          </StyledMenuItem>
         <StyledMenuItem>
           <ListItemText primary="Homeware" />
         </StyledMenuItem>

@@ -15,3 +15,7 @@
     margin: 20px;
 }
 
+.image {
+    max-width: fit-content;
+}
+
