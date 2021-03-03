@@ -45,7 +45,7 @@ const App = () => {
               <Route path='/' exact component={Home}  />
               <Route path='/Shop' exact component={Shop}  />
               <Route path='/About' exact component={About}  />
-  <Route path='/search/'><Search searchRes={searchResults} /></Route>
+  {result &&<Route path='/search/'><Search searchRes={searchResults} /></Route>}
             </Switch>
           </div>
         </Router>
