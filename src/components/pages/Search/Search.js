@@ -3,32 +3,16 @@ import SearchIcon from "@material-ui/icons/Search";
 
 
 
-const Search = () => {
+const Search = (searchRes) => {
     
-    const [search, setSearch] = useState("");
-    const [searchResults, setSearchResults] = useState([]);
-
-    const searchHandler = (val) => {
-        setSearch(val.target.value);
-      } 
-    
-    const dataSearch = async () => {
-    
-    const res = await fetch(`http://localhost:5000/search/${search}`);
-    
-    const data = await res.json();
-    setSearchResults(data);
-    console.log(data);
-    }
-
+    let array = searchRes.searchRes;
+    // console.log(searchRes.searchRes[0])
     return (
-        <div className="left_header">
-        <SearchIcon className="search" onClick={dataSearch}/>
-        {/* <Link to="/result"><SearchIcon className="search"/></Link> */}
-                <input placeholder="Search products" className="search"
-                type="text" onChange={(e)=>searchHandler(e)}/>
+        <div>
+            <p>hello world</p>
+            <p>{array[0].img}</p>
         </div>
-        //onChange={(e)=>searchHandler(e)}
+        
     )
 }
 
