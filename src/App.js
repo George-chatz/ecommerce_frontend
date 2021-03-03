@@ -10,13 +10,16 @@ import NavBar from "./components/NavBar"
 import SocialBar from "./components/socialsbar/socialsbar"
 import Result from './components/pages/Result/Result'
 import Search from './components/pages/Search/Search';
+import Categories from './components/pages/Categories/Categories';
 
 
 const App = () => {
   // const [dropdown, setDropdown] = useState(false)
   const [search, setSearch] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const [category, setCategory] = useState([]);
   const [result, setResult] = useState(false);
+  const [catResult, setCatResult] = useState(false);
 
   const searchHandler = (val) => {
     console.log(val);
@@ -33,12 +36,27 @@ const App = () => {
     console.log(data);
 
     }
+    
+  const categorySearch = async (category) => {
+
+    console.log(category);
+    const res = await fetch(`http://localhost:5000/category/${category}`)
+
+    const data = await res.json();
+    setCategory(data);
+    setCatResult(true);
+    console.log(data);
+
+  }
  
   
     return (
       <div className="App">
         <Router>
-        <NavBar searchHandle={(e)=>searchHandler(e)} searchData={dataSearch}/>
+        <NavBar searchHandle={(e)=>searchHandler(e)} searchData={dataSearch} 
+        media={()=>categorySearch("music, books and films")} clothing={()=>categorySearch("Clothing")}
+        accessories={()=>categorySearch("accessories")} souveniers={()=>categorySearch("souvenirs")} 
+        homeware={()=>categorySearch("homeware")}/>
             <SocialBar />
           <div className="App-header">
             <Switch>
@@ -47,6 +65,7 @@ const App = () => {
               <Route path='/About' exact component={About}  />
   {result &&<Route path='/search/'><Search searchRes={searchResults} /></Route>}
   <Route path='/checkout'/>
+  {catResult &&<Route path='/category/'><Categories categoriesRes={category}/></Route>}
             </Switch>
           </div>
         </Router>
