@@ -16,6 +16,21 @@
 }
 
 .image {
-    max-width: fit-content;
+    height: 144px;
 }
 
+.root {
+    max-width: 345px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.pN {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

@@ -28,3 +28,18 @@
     justify-content: space-evenly;
     margin: 20px;
 } */
+
+.content {
+    flex-grow: 1;
+    padding-top: 120px;
+  padding-bottom: 30px;
+}
+
+.root {
+    flex-grow: 1;
+}
+
+.MuiCardMedia-root {
+    margin: 100px;
+}
+

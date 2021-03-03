@@ -7,9 +7,9 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import PersonIcon from '@material-ui/icons/Person';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import CustomizedMenus from "./DropdownMenu"
-import Search from '../components/pages/Search/Search'
 import SearchIcon from "@material-ui/icons/Search";
-
+import IconButton from '@material-ui/core/IconButton';
+import Badge from '@material-ui/core/Badge';
 
 const NavBar = ({searchHandle, searchData, media, clothing, accessories, souveniers, homeware}) =>  {
   const [dropdown, setDropdown] = useState(false);
@@ -32,9 +32,21 @@ const testFunc = () => {
         <Link to="/About" className='nav-links'>About</Link>
        
         <CustomizedMenus media={media} clothing={clothing} accessories={accessories} souveniers={souveniers} homeware={homeware}/>
-        <Link> <FavoriteIcon className="matUIwish" alt ="wishlist" fontSize="large"></FavoriteIcon></Link>
-        <Link> <PersonIcon className="matUIuser"  alt ="user" fontSize="large"></PersonIcon></Link>
-        <Link> <ShoppingBasketIcon className="matUIcart" alt ="cart" fontSize="large"></ShoppingBasketIcon></Link>
+        <IconButton component={Link} to="/wishlist" aria-label="Show cart items" color="inherit">
+              <Badge  color="secondary">
+                <FavoriteIcon fontSize="large"/>
+              </Badge>
+            </IconButton><Link> <PersonIcon className="matUIwish" alt ="wishlist" fontSize="large"></PersonIcon></Link>
+        
+        
+        <IconButton component={Link} to="/cart" aria-label="Show cart items" color="inherit">
+              <Badge  color="secondary">
+                <ShoppingBasketIcon fontSize="large"/>
+              </Badge>
+            </IconButton>
+            
+        
+        
     
         <div className="left_header">
         {/* <SearchIcon className="search" onClick={searchData}/> */}
