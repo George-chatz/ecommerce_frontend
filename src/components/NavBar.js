@@ -7,7 +7,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import PersonIcon from '@material-ui/icons/Person';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
-import CustomizedMenus from "./Dropdownmenu"
+import CustomizedMenus from "./DropdownMenu"
 
 
 const NavBar = () =>  {

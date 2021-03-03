@@ -1,6 +1,6 @@
 import '../../App.css'
 import React from 'react';
-import Product from "../products/products"
+import Product from "../products/Products"
 import NavBar from '../NavBar';
 import glasses from "../images/glasses.jpg"
 

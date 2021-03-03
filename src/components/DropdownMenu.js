@@ -72,10 +72,7 @@ export default function CustomizedMenus() {
           <ListItemText primary="Clothing" />
         </StyledMenuItem>
         <StyledMenuItem>
-          <ListItemText primary="Souveniers" />
-        </StyledMenuItem>
-        <StyledMenuItem>
-          <ListItemText primary="Confectionary" />
+          <ListItemText primary="Souvenirs" />
         </StyledMenuItem>
         <StyledMenuItem>
           <ListItemText primary="Homeware" />
