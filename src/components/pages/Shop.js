@@ -10,18 +10,7 @@ function Shop() {
             <img/>
                 
             </div>
-            <div >
-                <Product
-                image={glasses}
-                itemname={"John Lennon Party Glasses"}
-                price={"2£"}
-                />
-                <Product
-                image={glasses}
-                itemname={"John Lennon Party Glasses"}
-                price={"2£"}
-                />      
-            </div>      
+                
         </div>
     )
 }
