@@ -17,7 +17,7 @@ const Product =({image,itemname,price, product, addToCart}) => {
 // add onClick={handleAddToCart} to add to shopping cart icon
 
 
-//can a unique key (ie. index) be assigned to allow react to identify each card?
+//onClick={addToCart} doesn't seem to be called
     return (
         <Card className="root">
             <CardActionArea>
@@ -34,7 +34,7 @@ const Product =({image,itemname,price, product, addToCart}) => {
           <FavoriteIcon />
           </IconButton>
           <p>{price}</p>
-          <IconButton color="primary" aria-label="add to shopping cart">
+          <IconButton color="primary" aria-label="add to shopping cart" onClick={addToCart}>
           <AddShoppingCartIcon/>
           </IconButton>
           </Typography>
