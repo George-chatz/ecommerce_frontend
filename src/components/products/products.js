@@ -8,16 +8,17 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import Typography from "@material-ui/core/Typography";
 import IconButton from '@material-ui/core/IconButton';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import { withRouter } from 'react-router-dom';
 
  
 const Product =({image,itemname,price, product, addToCart}) => {
 
-// const handleAddToCart = () => onAddToCart(product.id, 1);
-// haven't figured this out yet
-// add onClick={handleAddToCart} to add to shopping cart icon
+if(window.location.pathname === "/cart") {
+  //hide add to cart button
+  console.log("path is cart, hiding add button...")
+}
 
 
-//onClick={addToCart} doesn't seem to be called
     return (
         <Card className="root">
             <CardActionArea>
