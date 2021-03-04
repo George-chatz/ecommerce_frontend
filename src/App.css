@@ -1,7 +1,10 @@
-.left_header > input {
-  color: white;
-  border: none;
-  width: 50%;
+/* CSS Pancake layout */
+.parent {
+  flex-direction: column;
+  display: grid;
+  margin: 0px;
+  padding: 20px;
+  grid-template-rows: auto 1fr auto;
 }
 
 * {
@@ -11,7 +14,20 @@
     font-family: 'Open Sans', sans-serif;
     /* width: 100vw;
     height: 100vh; */
-  }
+ }
+
+.header_section {
+  flex-grow: 4;
+}
+
+
+.left_header > input {
+  color: white;
+  border: none;
+  width: 50%;
+}
+
+
 
 .left_header {
   flex: 0.3;
@@ -32,8 +48,20 @@
     background-color:#023E7E;
     color: white;
 }
+
+.body_section{
+  height: flex;
+  padding: 0, 0, 100 ,100px;
+}
+
+/* .Socialbar{
+  align-self: auto | flex-start;
+} */
   
-    
-  
+.footer_section {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}  
   
  
