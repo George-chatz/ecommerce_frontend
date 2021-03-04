@@ -18,7 +18,20 @@ const Product =({image,itemname,price, product, addToCart}) => {
 
 
 //onClick={addToCart} doesn't seem to be called
-    return (
+const addFromCart = (id) => {
+
+  // localStorage.setItem(array[index], JSON.stringify(array[index]));
+  //not working - currently this loops through all items upon render
+  console.log(id);
+
+
+}
+
+const testFunction = () => {
+  console.log("working")
+}
+
+    return ( 
         <Card className="root">
             <CardActionArea>
             <CardMedia>
@@ -30,7 +43,7 @@ const Product =({image,itemname,price, product, addToCart}) => {
             {itemname}
           </Typography>
           <Typography className="info" variant="body2" color="textSecondary" component="p">
-          <IconButton color="primary" aria-label="add to shopping cart">
+          <IconButton color="primary" aria-label="add to shopping cart" >
           <FavoriteIcon />
           </IconButton>
           <p>{price}</p>

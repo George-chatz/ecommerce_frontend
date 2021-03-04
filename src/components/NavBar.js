@@ -14,11 +14,6 @@ import Badge from '@material-ui/core/Badge';
 const NavBar = ({searchHandle, searchData, media, clothing, accessories, souveniers, homeware}) =>  {
   const [dropdown, setDropdown] = useState(false);
 
-const testFunc = () => { 
-  console.log("working")
-}
-
-
   return (
     <div className="navbar">
       
