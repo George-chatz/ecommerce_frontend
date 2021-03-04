@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, useParams} from "react-router-dom";
 import Home from './components/pages/Home';
@@ -47,9 +47,8 @@ const App = () => {
     setCategory(data);
     setCatResult(true);
     console.log(data);
-
   }
- 
+
   
     return (
       <div className="App">
@@ -57,7 +56,7 @@ const App = () => {
         <NavBar searchHandle={(e)=>searchHandler(e)} searchData={dataSearch} 
         media={()=>categorySearch("music, books and films")} clothing={()=>categorySearch("Clothing")}
         accessories={()=>categorySearch("accessories")} souveniers={()=>categorySearch("souvenirs")} 
-        homeware={()=>categorySearch("homeware")}/>
+        homeware={()=>categorySearch("homeware") }/>
             <SocialBar />
           <div className="App-header">
             <Switch>
@@ -66,7 +65,7 @@ const App = () => {
               <Route path='/About' exact component={About}  />
   {result &&<Route path='/search/'><Search searchRes={searchResults} /></Route>}
   <Route path='/checkout'/>
-  <Route path='/cart' component={Cart}/>
+  <Route path='/cart'><Cart /></Route>
   {catResult &&<Route path='/category/'><Categories categoriesRes={category}/></Route>}
             </Switch>
           </div>

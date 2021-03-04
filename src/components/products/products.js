@@ -7,16 +7,15 @@ import CardContent from "@material-ui/core/CardContent";
 import CardActionArea from '@material-ui/core/CardActionArea';
 import Typography from "@material-ui/core/Typography";
 import IconButton from '@material-ui/core/IconButton';
+import DeleteIcon from '@material-ui/icons/Delete';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import { withRouter } from 'react-router-dom';
 
  
-const Product =({image,itemname,price, product, addToCart}) => {
+const Product =({image,itemname,price, removeItem, addToCart}) => {
 
-if(window.location.pathname === "/cart") {
-  //hide add to cart button
-  console.log("path is cart, hiding add button...")
-}
+let path = window.location.pathname;
+let cart = "/cart";
 
 
     return (
@@ -35,9 +34,12 @@ if(window.location.pathname === "/cart") {
           <FavoriteIcon />
           </IconButton>
           <p>{price}</p>
+{ cart === path?<IconButton aria-label="delete" onClick={removeItem}> {/*if path is cart, hide add else hide delete*/}
+          <DeleteIcon />
+          </IconButton>  :
           <IconButton color="primary" aria-label="add to shopping cart" onClick={addToCart}>
           <AddShoppingCartIcon/>
-          </IconButton>
+          </IconButton>}
           </Typography>
         </CardContent>
            </CardActionArea>

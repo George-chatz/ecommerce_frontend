@@ -9,8 +9,7 @@ import Grid from '@material-ui/core/Grid';
 const Search = (searchRes) => {
     
     const addFromCart = (index) => {
-        let item = localStorage.length
-        localStorage.setItem(item, JSON.stringify(array[index]));
+        localStorage.setItem(localStorage.length, JSON.stringify(array[index]));
     }
 
     let array = searchRes.searchRes;
@@ -21,7 +20,7 @@ const Search = (searchRes) => {
             <Grid alignItems="center"
                 justify="center" container justify="center" spacing={4}>
                 {array.map((array, index) => (
-                <Grid key={index} item xs={12} sm={6} md={4} lg={3}>    <Product addToCart={addFromCart(index)}
+                <Grid key={index} item xs={12} sm={6} md={4} lg={3}>    <Product addToCart={()=>addFromCart(index)}
                     image = {array.img}
                     itemname = {array.product_name}
                     price = {`£${array.price}`}
