@@ -11,6 +11,7 @@ import SocialBar from "./components/socialsbar/socialsbar"
 import Result from './components/pages/Result/Result'
 import Search from './components/pages/Search/Search';
 import Categories from './components/pages/Categories/Categories';
+import Cart from './components/pages/Cart/Cart';
 
 
 const App = () => {
@@ -65,6 +66,7 @@ const App = () => {
               <Route path='/About' exact component={About}  />
   {result &&<Route path='/search/'><Search searchRes={searchResults} /></Route>}
   <Route path='/checkout'/>
+  <Route path='/cart' component={Cart}/>
   {catResult &&<Route path='/category/'><Categories categoriesRes={category}/></Route>}
             </Switch>
           </div>
