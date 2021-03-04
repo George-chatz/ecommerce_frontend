@@ -20,8 +20,8 @@ const Search = (searchRes) => {
             
             <Grid alignItems="center"
                 justify="center" container justify="center" spacing={4}>
-            {array.map((array, index) => (
-                <Grid key={index} item xs={12} sm={6} md={4} lg={3}>    <Product addToCart={()=>addFromCart(index)}
+                {array.map((array, index) => (
+                <Grid key={index} item xs={12} sm={6} md={4} lg={3}>    <Product addToCart={addFromCart(index)}
                     image = {array.img}
                     itemname = {array.product_name}
                     price = {`£${array.price}`}

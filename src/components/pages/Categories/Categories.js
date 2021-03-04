@@ -1,25 +1,31 @@
-import react from 'react';
+import React from 'react';
+import Product from '../../products/products';
+import Grid from '@material-ui/core/Grid';
 
 const Categories = (categoriesRes) => {
     
-    // console.log(categoriesRes)
-    let array = categoriesRes.categoriesRes;
-    console.log(categoriesRes.categoriesRes[0])
-    return (
-        <div>
-            <p>hello world</p>
-            {/* <p>{array[0].img}</p> */}
-            <p>hello</p>
-            <p>hello</p>
-            <p>hello</p>
-            <p>hello</p>
-            <p>hello</p>
-            <p>hello</p>
-            <p>hello</p>
-            <img src={array[0].img} />
-            <p>{array[0].img}</p>
-        </div>
+    const addFromCart = (index) => {
         
+        localStorage.setItem(array[index], JSON.stringify(array[index]));
+        //not working - currently this loops through all items upon render
+    }
+    let array = categoriesRes.categoriesRes;
+    
+    return (
+        <div className="content">
+            
+            <Grid alignItems="center"
+                justify="center" container justify="center" spacing={4}>
+                {array.map((array, index) => (
+                <Grid key={index} item xs={12} sm={6} md={4} lg={3}>    <Product addToCart={addFromCart(index)}
+                    image = {array.img}
+                    itemname = {array.product_name}
+                    price = {`£${array.price}`}
+                /> </Grid>
+            ))}   
+            </Grid>
+            
+        </div>  
     )
 }
 
