@@ -51,13 +51,20 @@ const App = () => {
   }
  
   
-    return (
+    return ( 
+    <div class="parent">
       <div className="App">
+      {/* parent class */}
+       
+        {/* Header */}
         <Router>
+        <header class="header_section">
         <NavBar searchHandle={(e)=>searchHandler(e)} searchData={dataSearch} 
         media={()=>categorySearch("music, books and films")} clothing={()=>categorySearch("Clothing")}
         accessories={()=>categorySearch("accessories")} souveniers={()=>categorySearch("souvenirs")} 
         homeware={()=>categorySearch("homeware")}/>
+        </header> 
+            <main class="body_section">
             <SocialBar />
           <div className="App-header">
             <Switch>
@@ -69,10 +76,15 @@ const App = () => {
   <Route path='/cart' component={Cart}/>
   {catResult &&<Route path='/category/'><Categories categoriesRes={category}/></Route>}
             </Switch>
-          </div>
+            </div>
+          </main>
         </Router>
+        {/* footer */}
+        <footer class="footer_section">
         <Footer />
             <BottomFooter />
+            </footer>
+            </div>
       </div>
     );
 };  
