@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import "./Search.css";
-import Product from '../../products/Products';
+import Product from '../../products/products';
 import Grid from '@material-ui/core/Grid';
 
 
