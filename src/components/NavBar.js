@@ -23,8 +23,7 @@ const NavBar = ({searchHandle, searchData, media, clothing, accessories, souveni
       
 
         <Link to="/" className='nav-links'>Home</Link>
-        <Link to="/TBS" className='nav-links'>TBS</Link>
-        <Link to="/About" className='nav-links'>About</Link>
+        <a href="https://www.beatlesstory.com/news/" target="_blank" rel="noreferrer noopener" className="nav-links">About</a>
        
         <CustomizedMenus media={media} clothing={clothing} accessories={accessories} souveniers={souveniers} homeware={homeware}/>
         <IconButton component={NavLink} to="/wishlist" aria-label="Show cart items" color="inherit">
