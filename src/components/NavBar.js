@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './NavBar.css';
 import logomain from "../images/logomain.jpg";
 import fab4logo from "..//images/FAB4STOREWEB.png"
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import PersonIcon from '@material-ui/icons/Person';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
@@ -13,11 +13,6 @@ import Badge from '@material-ui/core/Badge';
 
 const NavBar = ({searchHandle, searchData, media, clothing, accessories, souveniers, homeware}) =>  {
   const [dropdown, setDropdown] = useState(false);
-
-const testFunc = () => { 
-  console.log("working")
-}
-
 
   return (
     <div className="navbar">
@@ -32,14 +27,14 @@ const testFunc = () => {
         <Link to="/About" className='nav-links'>About</Link>
        
         <CustomizedMenus media={media} clothing={clothing} accessories={accessories} souveniers={souveniers} homeware={homeware}/>
-        <IconButton component={Link} to="/wishlist" aria-label="Show cart items" color="inherit">
+        <IconButton component={NavLink} to="/wishlist" aria-label="Show cart items" color="inherit">
               <Badge  color="secondary">
                 <FavoriteIcon fontSize="large"/>
               </Badge>
             </IconButton><Link> <PersonIcon className="matUIwish" alt ="wishlist" fontSize="large"></PersonIcon></Link>
         
         
-        <IconButton component={Link} to="/cart" aria-label="Show cart items" color="inherit">
+        <IconButton component={NavLink} to="/cart" aria-label="Show cart items" color="inherit">
               <Badge  color="secondary">
                 <ShoppingBasketIcon fontSize="large"/>
               </Badge>

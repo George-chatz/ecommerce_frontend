@@ -60,6 +60,7 @@
   
 .footer_section {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   margin-bottom: 20px;
 }  

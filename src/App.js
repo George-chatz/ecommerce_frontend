@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, useParams} from "react-router-dom";
 import Home from './components/pages/Home';
@@ -47,9 +47,8 @@ const App = () => {
     setCategory(data);
     setCatResult(true);
     console.log(data);
-
   }
- 
+
   
     return ( 
     <div class="parent">
@@ -73,7 +72,7 @@ const App = () => {
               <Route path='/About' exact component={About}  />
   {result &&<Route path='/search/'><Search searchRes={searchResults} /></Route>}
   <Route path='/checkout'/>
-  <Route path='/cart' component={Cart}/>
+  <Route path='/cart'><Cart /></Route>
   {catResult &&<Route path='/category/'><Categories categoriesRes={category}/></Route>}
             </Switch>
             </div>
@@ -81,7 +80,7 @@ const App = () => {
         </Router>
         {/* footer */}
         <footer class="footer_section">
-        <Footer />
+        <Footer /><br></br><br></br>
             <BottomFooter />
             </footer>
             </div>
