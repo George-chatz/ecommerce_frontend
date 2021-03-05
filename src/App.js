@@ -80,7 +80,7 @@ const App = () => {
         </Router>
         {/* footer */}
         <footer class="footer_section">
-        <Footer />
+        <Footer /><br></br><br></br>
             <BottomFooter />
             </footer>
             </div>

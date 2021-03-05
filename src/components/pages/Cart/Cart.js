@@ -4,11 +4,17 @@ import Grid from '@material-ui/core/Grid';
 
 const Cart = () => {
     
-
     const [cartData, setcartData] = useState([])
+    const [cartUpdate, setCartUpdate] = useState(true)
+    
 
-        const cartStorage = () => {
-        let cart = [];
+    
+    let cart = [];
+
+
+    if(cartUpdate === true) {
+        
+
         for (let i = 0; i<localStorage.length; i++) {
 
         let cartKey = localStorage.key(i);
@@ -16,10 +22,12 @@ const Cart = () => {
         let item = JSON.parse(cartItem);
 
         cart.push(item);
+
     }
     console.log(cart);
-    console.log(cartData)
+    console.log(cartData);
     setcartData(cart);
+    setCartUpdate(false);        
 }
 
     const removeFromCart = (index) => {
@@ -28,7 +36,9 @@ const Cart = () => {
         cart.splice(index, 1);
 
         setcartData(cart);
+        setCartUpdate(true);
     }
+
 
     return (
         <div className="content">

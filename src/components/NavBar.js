@@ -11,7 +11,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import IconButton from '@material-ui/core/IconButton';
 import Badge from '@material-ui/core/Badge';
 
-const NavBar = ({searchHandle, searchData, media, clothing, accessories, souveniers, homeware},cartLocalData) =>  {
+const NavBar = ({searchHandle, searchData, media, clothing, accessories, souveniers, homeware}) =>  {
   const [dropdown, setDropdown] = useState(false);
 
   return (
