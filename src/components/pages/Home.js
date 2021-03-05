@@ -13,7 +13,7 @@ function Home() {
             <div className="homecontainer">
                 <MainCaro/>
             <div className="newarrivals">
-                <p className="newarr"> SHOP NEW ARRIVALS</p>
+                <p className="newarr"> SHOP POPULAR PRODUCTS</p>
                 <div className="featuredproducts">
                     <Featuredproducts featuredimage={unionjacklargecushion}/>
                     <Featuredproducts featuredimage={glasses}/>
