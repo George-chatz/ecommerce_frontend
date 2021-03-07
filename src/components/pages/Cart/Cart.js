@@ -5,8 +5,7 @@ import Grid from '@material-ui/core/Grid';
 const Cart = () => {
     
     const [cartData, setcartData] = useState([])
-    const [cartUpdate, setCartUpdate] = useState(true)
-    
+    const [cartUpdate, setCartUpdate] = useState(true);
 
     
     let cart = [];
@@ -30,12 +29,28 @@ const Cart = () => {
     setCartUpdate(false);        
 }
 
-    const removeFromCart = (index) => {
-        localStorage.removeItem(index);
+    const onCartUpdate = () => {
+
+        localStorage.clear();
+
+        for (let i = 0; i<localStorage.length; i++) {
+
+            localStorage.setItem(localStorage.length, JSON.stringify(cart[i]));
+            console.log(`completed ${i} number of times`) //not running this?
+    
+        }
+
+        setcartData(cart);
+
+    }
+
+    const removeFromCart = async (index) => {
+        // localStorage.removeItem(index);
         let cart = cartData
         cart.splice(index, 1);
 
-        setcartData(cart);
+        onCartUpdate();
+
         setCartUpdate(true);
     }
 
@@ -55,10 +70,10 @@ const Cart = () => {
             </Grid>
             </div>
 
-            <div id="rightCart">
+            {/* <div id="rightCart">
                 <p>total cost: </p>
                 <p></p>
-            </div>
+            </div> */}
         </div>  
     )
 }
